@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Del Ayre | User Info Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Karla:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <h1>User Info Card</h1>
+        <p>A few details about you, pinned up as one card.</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <form id="infoForm" class="panel" autocomplete="off" novalidate>
+        <fieldset>
+          <legend>Personal information</legend>
+
+          <div class="row">
+            <div class="field">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" placeholder="Ana Reyes" />
+            </div>
+            <div class="field">
+              <span class="label">Upload picture</span>
+              <div class="file-row">
+                <input
+                  type="file"
+                  id="photo"
+                  class="sr-only"
+                  accept="image/*"
+                />
+                <span id="fileName" class="file-name">No picture chosen</span>
+                <label
+                  for="photo"
+                  class="file-btn"
+                  title="Upload picture"
+                  aria-label="Upload picture"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 16V5m0 0-4 4m4-4 4 4M5 19h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="btn-text">Upload</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="age">Age</label>
+              <input
+                type="number"
+                id="age"
+                min="0"
+                max="120"
+                placeholder="21"
+              />
+            </div>
+            <div class="field">
+              <label for="birthday">Birthday</label>
+              <input type="date" id="birthday" />
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Gender</span>
+            <div class="choices">
+              <label class="choice"
+                ><input type="radio" name="gender" value="Male" /> Male</label
+              >
+              <label class="choice"
+                ><input type="radio" name="gender" value="Female" />
+                Female</label
+              >
+              <label class="choice"
+                ><input type="radio" name="gender" value="Prefer not to say" />
+                Prefer not to say</label
+              >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="0917 123 4567" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="ana@example.com" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="education">Educational attainment</label>
+            <select id="education">
+              <option value="">Choose your highest level</option>
+              <option>Elementary</option>
+              <option>High school</option>
+              <option>Senior high school</option>
+              <option>Vocational / technical</option>
+              <option>College undergraduate</option>
+              <option>Bachelor's degree</option>
+              <option>Master's degree</option>
+              <option>Doctorate</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="country">Country</label>
+              <input
+                type="text"
+                id="country"
+                list="countryList"
+                placeholder="Philippines"
+              />
+              <datalist id="countryList">
+                <option value="Philippines"></option>
+                <option value="United States"></option>
+                <option value="Canada"></option>
+                <option value="United Kingdom"></option>
+                <option value="Australia"></option>
+                <option value="Japan"></option>
+                <option value="South Korea"></option>
+                <option value="Singapore"></option>
+                <option value="United Arab Emirates"></option>
+                <option value="Saudi Arabia"></option>
+              </datalist>
+            </div>
+            <div class="field">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                id="address"
+                placeholder="Street, town, province"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>More about you</legend>
+
+          <div class="field">
+            <label for="bio">Bio</label>
+            <textarea
+              id="bio"
+              rows="3"
+              placeholder="A sentence or two about yourself"
+            ></textarea>
+          </div>
+
+          <div class="field">
+            <span class="label">Favorite color</span>
+            <div class="choices">
+              <label class="choice"
+                ><input type="radio" name="color" value="Red" /> Red</label
+              >
+              <label class="choice"
+                ><input type="radio" name="color" value="Blue" /> Blue</label
+              >
+              <label class="choice"
+                ><input type="radio" name="color" value="Green" /> Green</label
+              >
+              <label class="choice"
+                ><input type="radio" name="color" value="Purple" />
+                Purple</label
+              >
+              <label class="choice"
+                ><input type="radio" name="color" value="Orange" />
+                Orange</label
+              >
+              <label class="choice"
+                ><input type="radio" name="color" value="Teal" /> Teal</label
+              >
+              <label class="choice"
+                ><input
+                  type="radio"
+                  name="color"
+                  value="Other"
+                  id="colorOtherRadio"
+                />
+                Other</label
+              >
+            </div>
+            <div id="colorOtherBox" class="other-box" hidden>
+              <input
+                type="text"
+                id="customColorName"
+                placeholder="Type your favorite color"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Hobbies</span>
+            <div class="choices">
+              <label class="choice"
+                ><input type="checkbox" name="hobby" value="Reading" />
+                Reading</label
+              >
+              <label class="choice"
+                ><input type="checkbox" name="hobby" value="Gaming" />
+                Gaming</label
+              >
+              <label class="choice"
+                ><input type="checkbox" name="hobby" value="Cooking" />
+                Cooking</label
+              >
+              <label class="choice"
+                ><input type="checkbox" name="hobby" value="Music" />
+                Music</label
+              >
+              <label class="choice"
+                ><input type="checkbox" name="hobby" value="Sports" />
+                Sports</label
+              >
+              <label class="choice"
+                ><input
+                  type="checkbox"
+                  name="hobby"
+                  value="Other"
+                  id="hobbyOtherCheck"
+                />
+                Other</label
+              >
+            </div>
+            <div id="hobbyOtherBox" class="other-box" hidden>
+              <input type="text" id="hobbyOther" placeholder="Your hobby" />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="confirm-wrap">
+          <label class="choice confirm"
+            ><input type="checkbox" id="confirm" /> I confirm that the
+            information above is correct.</label
+          >
+          <p id="confirmError" class="form-error" role="alert" hidden>
+            Tick the box to confirm your information before showing the card.
+          </p>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="showBtn" class="btn primary">
+            Show My Info
+          </button>
+          <button type="button" id="clearBtn" class="btn">Clear form</button>
+        </div>
+      </form>
+
+      <section class="output" aria-live="polite">
+        <figure id="card" class="polaroid">
+          <span class="pin" aria-hidden="true"></span>
+          <div class="photo">
+            <img id="photoImg" alt="Your uploaded picture" hidden />
+            <svg class="avatar-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8.5" r="4.2" />
+              <path d="M3.5 21c0-4.6 3.8-7.8 8.5-7.8s8.5 3.2 8.5 7.8z" />
+            </svg>
+          </div>
+          <figcaption>
+            <h2 id="cardName">Your card</h2>
+            <p id="cardSub">Fill in the form, then press Show My Info.</p>
+          </figcaption>
+          <div id="cardBody" class="card-body"></div>
+        </figure>
+        <p id="status" class="status"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <h2>Del Ayre | 2IT-A</h2>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
