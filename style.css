@@ -25,7 +25,6 @@ body {
     "Segoe UI",
     sans-serif;
   line-height: 1.55;
-  /* To use your own photograph, replace landscape.svg with your image, e.g. url("photo.jpg") */
   background: #1f3d4d url("flat-mountains.svg") center bottom / cover no-repeat
     fixed;
 }
